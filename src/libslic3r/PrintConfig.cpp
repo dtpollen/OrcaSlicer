@@ -6557,6 +6557,31 @@ void PrintConfigDef::init_fff_params()
     def->max = max_temp;
     def->set_default_value(new ConfigOptionInts{0});
 
+    // Orca: specialized temperatures. These are stored on the filament preset and exposed as the
+    // G-code variables [cold_temperature] and [extruder_temperature]. They do not drive any
+    // slicing or heating logic by themselves; use them from custom G-code / add-ons.
+    def = this->add("cold_temperature", coInts);
+    def->label = L("Cold");
+    def->tooltip = L("Cold temperature. This value is not used by the slicer directly; it is only "
+                     "stored on the filament profile and made available as the G-code variable "
+                     "[cold_temperature] for use in custom G-code or add-ons. A value of 0 leaves it unset.");
+    def->sidetext = L(u8"℃" /* °C */);	// degrees Celsius, CIS languages need translation
+    def->full_label = L("Cold temperature");
+    def->min = 0;
+    def->max = max_temp;
+    def->set_default_value(new ConfigOptionInts{0});
+
+    def = this->add("extruder_temperature", coInts);
+    def->label = L("Extruder");
+    def->tooltip = L("Extruder temperature. This value is not used by the slicer directly; it is only "
+                     "stored on the filament profile and made available as the G-code variable "
+                     "[extruder_temperature] for use in custom G-code or add-ons. A value of 0 leaves it unset.");
+    def->sidetext = L(u8"℃" /* °C */);	// degrees Celsius, CIS languages need translation
+    def->full_label = L("Extruder temperature");
+    def->min = 0;
+    def->max = max_temp;
+    def->set_default_value(new ConfigOptionInts{0});
+
     def = this->add("nozzle_temperature", coInts);
     def->label = L("Other layers");
     def->tooltip = L("Nozzle temperature after the first layer");
@@ -11203,6 +11228,9 @@ TemperaturesConfigDef::TemperaturesConfigDef()
     new_def("bed_temperature_initial_layer_single", coInt, "First layer bed temperature (initial extruder)", "First layer bed temperature for the initial extruder. Same as bed_temperature_initial_layer[initial_extruder]")
     new_def("chamber_temperature", coInts, "Chamber temperature", "Vector of chamber temperatures for each extruder/filament.")
     new_def("overall_chamber_temperature", coInt, "Overall chamber temperature", "Overall chamber temperature. This value is the maximum chamber temperature of any extruder/filament used.")
+    // Orca: specialized temperatures (stored on the filament profile, not used by the slicer)
+    new_def("cold_temperature", coInts, "Cold temperature", "Vector of cold temperatures for each extruder/filament. Stored on the filament profile; not used by the slicer.")
+    new_def("extruder_temperature", coInts, "Extruder temperature", "Vector of extruder temperatures for each extruder/filament. Stored on the filament profile; not used by the slicer.")
     new_def("first_layer_bed_temperature", coInts, "First layer bed temperature", "Vector of first layer bed temperatures for each extruder/filament. Provides the same value as bed_temperature_initial_layer.")
     new_def("first_layer_temperature", coInts, "First layer temperature", "Vector of first layer temperatures for each extruder/filament.")
 }
