@@ -46,4 +46,8 @@ test.js
 internal_docs/
 *.flatpak
 /flatpak-repo/
+
 pollen_postprocess.py
+# Python bytecode
+__pycache__/
+*.pyc
