@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: orcaslicerua\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-26 10:26+0800\n"
+"POT-Creation-Date: 2026-07-03 14:43+0200\n"
 "PO-Revision-Date: 2025-03-07 09:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
@@ -1727,7 +1727,12 @@ msgid ""
 "To migrate your existing profiles, log in to Orca Cloud and they will be transferred automatically. To learn more about how OrcaSlicer stores and syncs your profiles, or to migrate your presets manually, check out our wiki.\n"
 "\n"
 "If you did not use Bambu Cloud to sync profiles, this change does not affect you and you can safely ignore this message."
-msgstr "Починаючи з версії 2.4.0, OrcaSlicer синхронізує профілі користувача через Orca Cloud замість Bambu Cloud.\n\nЩоб перенести наявні профілі, увійдіть до Orca Cloud, і вони будуть перенесені автоматично. Щоб дізнатися більше про те, як OrcaSlicer зберігає та синхронізує ваші профілі, або щоб перенести свої шаблони вручну, перегляньте нашу вікі.\n\nЯкщо ви не використовували Bambu Cloud для синхронізації профілів, ця зміна вас не стосується, і ви можете сміливо проігнорувати це повідомлення."
+msgstr ""
+"Починаючи з версії 2.4.0, OrcaSlicer синхронізує профілі користувача через Orca Cloud замість Bambu Cloud.\n"
+"\n"
+"Щоб перенести наявні профілі, увійдіть до Orca Cloud, і вони будуть перенесені автоматично. Щоб дізнатися більше про те, як OrcaSlicer зберігає та синхронізує ваші профілі, або щоб перенести свої шаблони вручну, перегляньте нашу вікі.\n"
+"\n"
+"Якщо ви не використовували Bambu Cloud для синхронізації профілів, ця зміна вас не стосується, і ви можете сміливо проігнорувати це повідомлення."
 
 msgid "Profile syncing change"
 msgstr ""
@@ -4106,6 +4111,10 @@ msgstr ""
 #, c-format, boost-format
 msgid "Current chamber temperature is higher than the material's safe temperature; this may result in material softening and nozzle clogs. The maximum safe temperature for the material is %d"
 msgstr "Поточна температура камери вища, ніж безпечна температура матеріалу, це може призвести до розм’якшення матеріалу та його забивання. Максимально безпечна температура для цього матеріалу становить %d"
+
+#, c-format, boost-format
+msgid "The minimal chamber temperature (%d℃) is higher than the target chamber temperature (%d℃). The minimal value is the threshold at which printing starts while the chamber keeps heating toward the target, so it should not exceed it. It will be clamped to the target."
+msgstr ""
 
 # TODO: Review, changed by lang refactor. PR 14254
 msgid ""
@@ -7896,6 +7905,45 @@ msgstr ""
 msgid "Choose Download Directory"
 msgstr "Виберіть каталог завантаження"
 
+msgid "(Latest)"
+msgstr ""
+
+msgid "Network plug-in switched successfully."
+msgstr ""
+
+msgid "Success"
+msgstr ""
+
+msgid "Failed to load network plug-in. Please restart the application."
+msgstr ""
+
+#, c-format, boost-format
+msgid ""
+"You've selected network plug-in version %s.\n"
+"\n"
+"Would you like to download and install this version now?\n"
+"\n"
+"Note: The application may need to restart after installation."
+msgstr ""
+
+msgid "Download Network Plug-in"
+msgstr ""
+
+msgid "Reload the network plug-in without restarting the application"
+msgstr ""
+
+msgid "Network plug-in reloaded successfully."
+msgstr ""
+
+msgid "Reload"
+msgstr ""
+
+msgid "Failed to reload network plug-in. Please restart the application."
+msgstr ""
+
+msgid "Reload Failed"
+msgstr ""
+
 msgid "Associate"
 msgstr "Ассоціювати"
 
@@ -7951,12 +7999,6 @@ msgstr "Показувати заставку"
 msgid "Show the splash screen during startup."
 msgstr "Показувати заставку під час запуску."
 
-msgid "Show shared profiles notification"
-msgstr ""
-
-msgid "Show a notification with a link to browse shared profiles when the selected printer is changed."
-msgstr ""
-
 msgid "Use window buttons on left side"
 msgstr ""
 
@@ -7987,6 +8029,13 @@ msgstr "Поведінка завантаження"
 msgid "Should printer/filament/process settings be loaded when opening a 3MF file?"
 msgstr "Чи повинні бути завантажені налаштування принтера/філаменту/процесу при відкритті файлу .3mf?"
 
+msgid "Auto backup"
+msgstr "Автобекап"
+
+# TODO: Review, changed by lang refactor. PR 14254
+msgid "Backup your project periodically to help with restoring from an occasional crash."
+msgstr "Періодично робіть резервну копію вашого проекту для відновлення після випадкового збою."
+
 msgid "Maximum recent files"
 msgstr ""
 
@@ -8005,12 +8054,17 @@ msgstr ""
 msgid "If enabled, a parameter settings dialog will appear during STEP file import."
 msgstr ""
 
-msgid "Auto backup"
-msgstr "Автобекап"
+msgid "Quality level for Draco export"
+msgstr ""
 
-# TODO: Review, changed by lang refactor. PR 14254
-msgid "Backup your project periodically to help with restoring from an occasional crash."
-msgstr "Періодично робіть резервну копію вашого проекту для відновлення після випадкового збою."
+msgid "bits"
+msgstr "bits"
+
+msgid ""
+"Controls the quantization bit depth used when compressing the mesh to Draco format.\n"
+"0 = lossless compression (geometry is preserved at full precision). Valid lossy values range from 8 to 30.\n"
+"Lower values produce smaller files but lose more geometric detail; higher values preserve more detail at the cost of larger files."
+msgstr ""
 
 msgid "Preset"
 msgstr "Шаблон"
@@ -8042,6 +8096,12 @@ msgstr "філаменти"
 msgid "Optimizes filament area maximum height by chosen filament count."
 msgstr ""
 
+msgid "Show shared profiles notification"
+msgstr ""
+
+msgid "Show a notification with a link to browse shared profiles when the selected printer is changed."
+msgstr ""
+
 msgid "Features"
 msgstr ""
 
@@ -8052,18 +8112,6 @@ msgid "With this option enabled, you can send a task to multiple devices at the 
 msgstr "З цією опцією ввімкненою, ви можете відправляти завдання на кілька пристроїв одночасно та керувати декількома пристроями."
 
 msgid "Pop up to select filament grouping mode"
-msgstr ""
-
-msgid "Quality level for Draco export"
-msgstr ""
-
-msgid "bits"
-msgstr "bits"
-
-msgid ""
-"Controls the quantization bit depth used when compressing the mesh to Draco format.\n"
-"0 = lossless compression (geometry is preserved at full precision). Valid lossy values range from 8 to 30.\n"
-"Lower values produce smaller files but lose more geometric detail; higher values preserve more detail at the cost of larger files."
 msgstr ""
 
 msgid "Behaviour"
@@ -8293,19 +8341,6 @@ msgstr "Перевіряти лише стабільні оновлення"
 msgid "Auto sync user presets (Printer/Filament/Process)"
 msgstr "Автоматична синхронізація користувацьких профілів (принтер/філамент/процес)"
 
-# TODO: Review, changed by lang refactor. PR 14254
-msgid "Update built-in presets automatically."
-msgstr "Оновлюйте вбудовані пресети автоматично."
-
-msgid "Use encrypted file for token storage"
-msgstr ""
-
-msgid "Store authentication tokens in an encrypted file instead of the system keychain. (Requires restart)"
-msgstr ""
-
-msgid "Filament Sync Options"
-msgstr ""
-
 msgid "Filament sync mode"
 msgstr ""
 
@@ -8318,6 +8353,16 @@ msgstr ""
 msgid "Color only"
 msgstr ""
 
+# TODO: Review, changed by lang refactor. PR 14254
+msgid "Update built-in presets automatically."
+msgstr "Оновлюйте вбудовані пресети автоматично."
+
+msgid "Use encrypted file for token storage"
+msgstr ""
+
+msgid "Store authentication tokens in an encrypted file instead of the system keychain. (Requires restart)"
+msgstr ""
+
 msgid "Bambu network plug-in"
 msgstr ""
 
@@ -8328,30 +8373,6 @@ msgid "Network plug-in version"
 msgstr ""
 
 msgid "Select the network plug-in version to use"
-msgstr ""
-
-msgid "(Latest)"
-msgstr ""
-
-msgid "Network plug-in switched successfully."
-msgstr ""
-
-msgid "Success"
-msgstr ""
-
-msgid "Failed to load network plug-in. Please restart the application."
-msgstr ""
-
-#, c-format, boost-format
-msgid ""
-"You've selected network plug-in version %s.\n"
-"\n"
-"Would you like to download and install this version now?\n"
-"\n"
-"Note: The application may need to restart after installation."
-msgstr ""
-
-msgid "Download Network Plug-in"
 msgstr ""
 
 msgid "Associate files to OrcaSlicer"
@@ -8402,18 +8423,21 @@ msgstr ""
 msgid "Skip AMS blacklist check"
 msgstr "Пропустити перевірку чорного списку AMS"
 
-msgid "(Experimental) Keep painted feature after mesh change"
+msgid "Show unsupported presets"
+msgstr ""
+
+msgid "Show incompatible/unsupported presets in the printer and filament dropdown lists. These presets cannot be selected."
+msgstr ""
+
+msgid "Experimental Features"
+msgstr ""
+
+msgid "Keep painted feature after mesh change"
 msgstr ""
 
 msgid ""
 "Attempt to keep painted features (color/seam/support/fuzzy etc.) after changing the object mesh (such as cut/reload from disk/simplify/fix etc.)\n"
 "Highly experimental! Slow and may create artifact."
-msgstr ""
-
-msgid "Show unsupported presets"
-msgstr ""
-
-msgid "Show incompatible/unsupported presets in the printer and filament dropdown lists. These presets cannot be selected."
 msgstr ""
 
 msgid "Allow Abnormal Storage"
@@ -8442,24 +8466,6 @@ msgstr "налагодження"
 msgid "trace"
 msgstr "слід"
 
-msgid "Network plug-in"
-msgstr ""
-
-msgid "Reload"
-msgstr ""
-
-msgid "Reload the network plug-in without restarting the application"
-msgstr ""
-
-msgid "Network plug-in reloaded successfully."
-msgstr ""
-
-msgid "Failed to reload network plug-in. Please restart the application."
-msgstr ""
-
-msgid "Reload Failed"
-msgstr ""
-
 msgid "Debug"
 msgstr ""
 
@@ -8474,25 +8480,6 @@ msgstr "Синхронізація профілів"
 
 msgid "Preferences sync"
 msgstr "Синхронізація налаштувань"
-
-msgid "View control settings"
-msgstr "Перегляд параметрів керування"
-
-msgid "Rotate view"
-msgstr "Повернути вигляд"
-
-msgid "Pan view"
-msgstr "Панорамний вигляд"
-
-msgid "Zoom view"
-msgstr "Перегляд масштабу"
-
-msgid "Other"
-msgstr "Інший"
-
-# TODO: Review, changed by lang refactor. PR 14254
-msgid "Reverse scroll direction while zooming"
-msgstr "Колісок миші реверсує при масштабуванні"
 
 msgid "Enable SSL(MQTT)"
 msgstr "Увімкнути SSL (MQTT)"
@@ -9196,6 +9183,12 @@ msgstr "Видалити цей профіль"
 msgid "Search in preset"
 msgstr "Пошук у профілі"
 
+msgid "Synchronization of different extruder drives or nozzle volume types is not supported."
+msgstr ""
+
+msgid "Synchronize the modification of parameters to the corresponding parameters of another extruder."
+msgstr ""
+
 msgid "Click to reset all settings to the last saved preset."
 msgstr "Натисніть, щоб скинути всі налаштування до останньої збереженої попередньої установки."
 
@@ -9487,6 +9480,18 @@ msgstr "Коефіцієнт потоку та Випередження тиск
 
 msgid "Print chamber temperature"
 msgstr "Температура в камері друку"
+
+msgid "Chamber temperature"
+msgstr "Температура в камері"
+
+msgid "Target chamber temperature, and the minimal chamber temperature at which printing should start"
+msgstr ""
+
+msgid "Target"
+msgstr ""
+
+msgid "Minimal"
+msgstr ""
 
 msgid "Print temperature"
 msgstr "Температура друку"
@@ -9818,11 +9823,21 @@ msgid "Don't warn again for this preset"
 msgstr ""
 
 #, c-format, boost-format
-msgid "Left: %s"
+msgid "%s: %s"
+msgstr ""
+
+msgid "No modifications need to be copied."
+msgstr ""
+
+msgid "Copy paramters"
 msgstr ""
 
 #, c-format, boost-format
-msgid "Right: %s"
+msgid "Modify paramters of %s"
+msgstr ""
+
+#, c-format, boost-format
+msgid "Do you want to modify the following parameters of the %s to that of the %s?"
 msgstr ""
 
 msgid "Click to reset current value and attach to the global value."
@@ -9843,7 +9858,7 @@ msgid "Transfer or discard changes"
 msgstr "Відкинути або зберегти зміни"
 
 # TODO: Review, changed by lang refactor. PR 14254
-msgid "Old value"
+msgid "Old Value"
 msgstr "Старе значення"
 
 msgid "New Value"
@@ -9964,6 +9979,12 @@ msgstr ""
 
 msgid "Capabilities"
 msgstr "Можливості"
+
+msgid "Left: "
+msgstr ""
+
+msgid "Right: "
+msgstr ""
 
 msgid "Show all presets (including incompatible)"
 msgstr "Показувати всі профілі (включаючи несумісні)"
@@ -12058,6 +12079,23 @@ msgstr "Звичайний друк"
 msgid "This is the default acceleration for both normal printing and travel after the first layer."
 msgstr "Прискорення за умовчанням як для звичайного друку, так і для переміщення за виключенням першого шару"
 
+msgid "Acceleration of travel moves."
+msgstr "Прискорення холостого руху"
+
+msgid "First layer travel"
+msgstr ""
+
+msgid ""
+"Travel acceleration of first layer.\n"
+"The percentage value is relative to Travel Acceleration."
+msgstr ""
+
+msgid "mm/s² or %"
+msgstr "мм/с² або %"
+
+msgid "Acceleration of bridges. If the value is expressed as a percentage (e.g. 50%), it will be calculated based on the outer wall acceleration."
+msgstr "Прискорення мостів. Якщо значення виражено у відсотках (наприклад, 50%), воно розраховано з урахуванням прискорення зовнішнього периметра."
+
 msgid "Default filament profile"
 msgstr "Профіль стандартного філаменту"
 
@@ -12266,12 +12304,26 @@ msgstr "Хорди Архімеда"
 msgid "Octagram Spiral"
 msgstr "Спіральна октограма"
 
+msgid "Top surface density"
+msgstr ""
+
+msgid "Density of top surface layer. A value of 100% creates a fully solid, smooth top layer. Reducing this value results in a textured top surface, according to the chosen top surface pattern. A value of 0% will result in only the walls on the top layer being created. Intended for aesthetic or functional purposes, not to fix issues such as over-extrusion."
+msgstr ""
+
 msgid "Bottom surface pattern"
 msgstr "Шаблон нижньої поверхні"
 
 # TODO: Review, changed by lang refactor. PR 14254
 msgid "This is the line pattern of bottom surface infill, not including bridge infill."
 msgstr "Шаблон ліній заповнення нижньої поверхні, крім заповнення мостів"
+
+msgid "Bottom surface density"
+msgstr ""
+
+msgid ""
+"Density of the bottom surface layer. Intended for aesthetic or functional purposes, not to fix issues such as over-extrusion.\n"
+"WARNING: Lowering this value may negatively affect bed adhesion."
+msgstr ""
 
 msgid "Internal solid infill pattern"
 msgstr "Шаблон внутрішнього суцільного заповнення"
@@ -12572,18 +12624,6 @@ msgid "Auto For Flush"
 msgstr ""
 
 msgid "Auto For Match"
-msgstr ""
-
-msgid "Enable filament dynamic map"
-msgstr ""
-
-msgid "Enable dynamic filament mapping during print."
-msgstr ""
-
-msgid "Has filament switcher"
-msgstr ""
-
-msgid "Printer has a filament switcher hardware (e.g., AMS)."
 msgstr ""
 
 msgid "Flush temperature"
@@ -12923,6 +12963,7 @@ msgstr ""
 msgid "Z-buckling bias optimization (experimental)"
 msgstr ""
 
+#, no-c-format, no-boost-format
 msgid "Tightens the gyroid wave along the Z (vertical) axis at low infill density to shorten the effective vertical column length and improve Z-axis compression buckling resistance. Filament use is preserved. No effect at ~30% sparse infill density and above. Only applies when Sparse infill pattern is set to Gyroid."
 msgstr ""
 
@@ -12990,79 +13031,6 @@ msgstr "TPMS-FK"
 msgid "Gyroid"
 msgstr "Гіроїд"
 
-msgid "Lateral lattice angle 1"
-msgstr "Кут решітки 1"
-
-msgid "The angle of the first set of Lateral lattice elements in the Z direction. Zero is vertical."
-msgstr "Кут першого набору 2D-решіткових елементів у напрямку Z. Нуль означає вертикальне розташування."
-
-msgid "Lateral lattice angle 2"
-msgstr "Кут решітки 1"
-
-msgid "The angle of the second set of Lateral lattice elements in the Z direction. Zero is vertical."
-msgstr "Кут другого набору 2D-решіткових елементів у напрямку Z. Нуль означає вертикальне розташування."
-
-msgid "Infill overhang angle"
-msgstr ""
-
-msgid "The angle of the infill angled lines. 60° will result in a pure honeycomb."
-msgstr ""
-
-msgid "Lightning overhang angle"
-msgstr ""
-
-msgid "Maximum overhang angle for Lightning infill support propagation."
-msgstr ""
-
-msgid "Prune angle"
-msgstr ""
-
-msgid ""
-"Controls how aggressively short or unsupported Lightning branches are pruned.\n"
-"This angle is converted internally to a per-layer distance."
-msgstr ""
-
-msgid "Straightening angle"
-msgstr ""
-
-msgid "Maximum straightening angle used to simplify Lightning branches."
-msgstr ""
-
-msgid "Sparse infill anchor length"
-msgstr "Довжина прив’язки часткового заповнення"
-
-msgid ""
-"Connect an infill line to an internal perimeter with a short segment of an additional perimeter. If expressed as percentage (example: 15%) it is calculated over infill extrusion width. Orca Slicer tries to connect two close infill lines to a short perimeter segment. If no such perimeter segment shorter than infill_anchor_max is found, the infill line is connected to a perimeter segment at just one side and the length of the perimeter segment taken is limited to this parameter, but no longer than anchor_length_max.\n"
-"Set this parameter to zero to disable anchoring perimeters connected to a single infill line."
-msgstr ""
-"З'єднайте лінію заповнення з внутрішнім периметром із коротким сегментомдодаткового периметра. Якщо воно виражено у відсотках (наприклад, 15%), воно розраховується за шириною екструзії заповнення. Orca Slicer намагається з'єднати Дві близькі лінії заповнення з коротким сегментом периметра. Якщо такий сегмент периметра коротше infill_anchor_max не знайдено, лінія заповнення з'єднується з сегментом периметра лише з одного боку, і довжина взятого сегменту периметра обмежена цим параметром, але не більше anchor_length_max.\n"
-"Встановіть цей параметр рівним нулю, щоб вимкнути периметри прив'язки.пов'язані з однією лінією заповнення."
-
-msgid "0 (no open anchors)"
-msgstr "0 (немає відкритих прив'язок)"
-
-msgid "1000 (unlimited)"
-msgstr "1000 (необмежено)"
-
-msgid "Maximum length of the infill anchor"
-msgstr "Максимальна довжина прив’язки заповнення"
-
-msgid ""
-"Connect an infill line to an internal perimeter with a short segment of an additional perimeter. If expressed as percentage (example: 15%) it is calculated over infill extrusion width. Orca Slicer tries to connect two close infill lines to a short perimeter segment. If no such perimeter segment shorter than this parameter is found, the infill line is connected to a perimeter segment at just one side and the length of the perimeter segment taken is limited to infill_anchor, but no longer than this parameter.\n"
-"If set to 0, the old algorithm for infill connection will be used, it should create the same result as with 1000 & 0."
-msgstr ""
-"З'єднайте лінію заповнення з внутрішнім периметром із коротким сегментомдодаткового периметра. Якщо воно виражено у відсотках (наприклад, 15%), воно розраховується за шириною екструзії заповнення. Orca Slicer намагається з'єднати Дві близькі лінії заповнення з коротким сегментом периметра. Якщо такий сегмент периметра коротший за цей параметр не знайдено, лінія заповнення з'єднується з сегментом периметра лише з одного боку, і довжина взятого сегмент периметра обмежений infill_anchor, але не довшим за цей параметр.\n"
-"Якщо встановлено значення 0, буде використано старий алгоритм для Підключення заповнення, він повинен створити той же результат, що і для 1000 & 0."
-
-msgid "0 (Simple connect)"
-msgstr "0 (просте підключення)"
-
-msgid "Acceleration of inner walls."
-msgstr "Прискорення внутрішніх периметрів"
-
-msgid "Acceleration of travel moves."
-msgstr "Прискорення холостого руху"
-
 # TODO: Review, changed by lang refactor. PR 14254
 msgid "This is the acceleration of top surface infill. Using a lower value may improve top surface quality."
 msgstr "Прискорення заповнення верхньої поверхні. Використання меншого значенняможе покращити якість верхньої поверхні"
@@ -13071,11 +13039,8 @@ msgstr "Прискорення заповнення верхньої повер�
 msgid "Acceleration of outer wall: using a lower value can improve quality."
 msgstr "Прискорення зовнішнього периметра. Використання меншого значення може поліпшити якість"
 
-msgid "Acceleration of bridges. If the value is expressed as a percentage (e.g. 50%), it will be calculated based on the outer wall acceleration."
-msgstr "Прискорення мостів. Якщо значення виражено у відсотках (наприклад, 50%), воно розраховано з урахуванням прискорення зовнішнього периметра."
-
-msgid "mm/s² or %"
-msgstr "мм/с² або %"
+msgid "Acceleration of inner walls."
+msgstr "Прискорення внутрішніх периметрів"
 
 msgid "Acceleration of sparse infill. If the value is expressed as a percentage (e.g. 100%), it will be calculated based on the default acceleration."
 msgstr "Прискорення заповнення. Якщо значення виражено у відсотках (наприклад, 100%), воно буде розраховане на основі прискорення за умовчанням."
@@ -13086,14 +13051,6 @@ msgstr "Прискорення заповнення внутрішнього т�
 # TODO: Review, changed by lang refactor. PR 14254
 msgid "This is the printing acceleration for the first layer. Using limited acceleration can improve build plate adhesion."
 msgstr "Прискорення першого шару. Використання меншого значення може покращити прилипання до робочої пластини"
-
-msgid "First layer travel"
-msgstr ""
-
-msgid ""
-"Travel acceleration of first layer.\n"
-"The percentage value is relative to Travel Acceleration."
-msgstr ""
 
 msgid "Enable accel_to_decel"
 msgstr "Увімкнути прискорення до уповільнення"
@@ -13188,6 +13145,17 @@ msgstr "Швидкість вентилятора лінійно збільшу�
 
 msgid "layer"
 msgstr "шар"
+
+msgid "First layer fan speed"
+msgstr ""
+
+msgid ""
+"Sets an exact fan speed for the first layer, overriding all other cooling settings. Useful for protecting 3D-printed toolhead parts (e.g. Voron-style ABS/ASA ducts) from a hot bed. A small amount of airflow cools the ducts down, without using full cooling that may in certain conditions hurt first-layer adhesion.\n"
+"From the second layer onwards, normal cooling resumes.\n"
+"If \"Full fan speed at layer\" is also set, the fan ramps smoothly from this value on the first layer up to your target by the chosen layer.\n"
+"Only available when \"No cooling for the first\" is 0.\n"
+"Set to -1 to disable it."
+msgstr ""
 
 msgid "Support interface fan speed"
 msgstr "Швидкість вентилятора під час друку підтримки"
@@ -13700,6 +13668,73 @@ msgstr ""
 
 msgid "Probing exclude area of clumping."
 msgstr ""
+
+msgid "Lateral lattice angle 1"
+msgstr "Кут решітки 1"
+
+msgid "The angle of the first set of Lateral lattice elements in the Z direction. Zero is vertical."
+msgstr "Кут першого набору 2D-решіткових елементів у напрямку Z. Нуль означає вертикальне розташування."
+
+msgid "Lateral lattice angle 2"
+msgstr "Кут решітки 1"
+
+msgid "The angle of the second set of Lateral lattice elements in the Z direction. Zero is vertical."
+msgstr "Кут другого набору 2D-решіткових елементів у напрямку Z. Нуль означає вертикальне розташування."
+
+msgid "Infill overhang angle"
+msgstr ""
+
+msgid "The angle of the infill angled lines. 60° will result in a pure honeycomb."
+msgstr ""
+
+msgid "Lightning overhang angle"
+msgstr ""
+
+msgid "Maximum overhang angle for Lightning infill support propagation."
+msgstr ""
+
+msgid "Prune angle"
+msgstr ""
+
+msgid ""
+"Controls how aggressively short or unsupported Lightning branches are pruned.\n"
+"This angle is converted internally to a per-layer distance."
+msgstr ""
+
+msgid "Straightening angle"
+msgstr ""
+
+msgid "Maximum straightening angle used to simplify Lightning branches."
+msgstr ""
+
+msgid "Sparse infill anchor length"
+msgstr "Довжина прив’язки часткового заповнення"
+
+msgid ""
+"Connect an infill line to an internal perimeter with a short segment of an additional perimeter. If expressed as percentage (example: 15%) it is calculated over infill extrusion width. Orca Slicer tries to connect two close infill lines to a short perimeter segment. If no such perimeter segment shorter than infill_anchor_max is found, the infill line is connected to a perimeter segment at just one side and the length of the perimeter segment taken is limited to this parameter, but no longer than anchor_length_max.\n"
+"Set this parameter to zero to disable anchoring perimeters connected to a single infill line."
+msgstr ""
+"З'єднайте лінію заповнення з внутрішнім периметром із коротким сегментомдодаткового периметра. Якщо воно виражено у відсотках (наприклад, 15%), воно розраховується за шириною екструзії заповнення. Orca Slicer намагається з'єднати Дві близькі лінії заповнення з коротким сегментом периметра. Якщо такий сегмент периметра коротше infill_anchor_max не знайдено, лінія заповнення з'єднується з сегментом периметра лише з одного боку, і довжина взятого сегменту периметра обмежена цим параметром, але не більше anchor_length_max.\n"
+"Встановіть цей параметр рівним нулю, щоб вимкнути периметри прив'язки.пов'язані з однією лінією заповнення."
+
+msgid "0 (no open anchors)"
+msgstr "0 (немає відкритих прив'язок)"
+
+msgid "1000 (unlimited)"
+msgstr "1000 (необмежено)"
+
+msgid "Maximum length of the infill anchor"
+msgstr "Максимальна довжина прив’язки заповнення"
+
+msgid ""
+"Connect an infill line to an internal perimeter with a short segment of an additional perimeter. If expressed as percentage (example: 15%) it is calculated over infill extrusion width. Orca Slicer tries to connect two close infill lines to a short perimeter segment. If no such perimeter segment shorter than this parameter is found, the infill line is connected to a perimeter segment at just one side and the length of the perimeter segment taken is limited to infill_anchor, but no longer than this parameter.\n"
+"If set to 0, the old algorithm for infill connection will be used, it should create the same result as with 1000 & 0."
+msgstr ""
+"З'єднайте лінію заповнення з внутрішнім периметром із коротким сегментомдодаткового периметра. Якщо воно виражено у відсотках (наприклад, 15%), воно розраховується за шириною екструзії заповнення. Orca Slicer намагається з'єднати Дві близькі лінії заповнення з коротким сегментом периметра. Якщо такий сегмент периметра коротший за цей параметр не знайдено, лінія заповнення з'єднується з сегментом периметра лише з одного боку, і довжина взятого сегмент периметра обмежений infill_anchor, але не довшим за цей параметр.\n"
+"Якщо встановлено значення 0, буде використано старий алгоритм для Підключення заповнення, він повинен створити той же результат, що і для 1000 & 0."
+
+msgid "0 (Simple connect)"
+msgstr "0 (просте підключення)"
 
 msgid ""
 "Filament to print internal sparse infill.\n"
@@ -14570,6 +14605,18 @@ msgstr "Direct Drive"
 msgid "Bowden"
 msgstr "Боуден"
 
+msgid "Enable filament dynamic map"
+msgstr ""
+
+msgid "Enable dynamic filament mapping during print."
+msgstr ""
+
+msgid "Has filament switcher"
+msgstr ""
+
+msgid "Printer has a filament switcher hardware (e.g., AMS)."
+msgstr ""
+
 msgid "Extra length on restart"
 msgstr "Додаткова довжина під час перезавантаження"
 
@@ -14997,6 +15044,9 @@ msgstr "Під час розрізання тріщини на трикутну 
 msgid "Slicing Mode"
 msgstr "Режим нарізки"
 
+msgid "Other"
+msgstr "Інший"
+
 msgid "Use \"Even-odd\" for 3DLabPrint airplane models. Use \"Close holes\" to close all holes in the model."
 msgstr "Використовуйте «парний-непарний» для моделей літаків 3DLabPrint. Використовуйте «Закрити отвори», щоб закрити всі отвори в моделі."
 
@@ -15355,9 +15405,6 @@ msgstr ""
 "\n"
 "Цей параметр залежить від підтримки команд M191 і M141 у мікропрограмі, як через макроси, так і нативно, і зазвичай використовується при встановленому активному нагрівачі камери."
 
-msgid "Chamber temperature"
-msgstr "Температура в камері"
-
 msgid ""
 "For high-temperature materials like ABS, ASA, PC, and PA, a higher chamber temperature can help suppress or reduce warping and potentially lead to higher interlayer bonding strength. However, at the same time, a higher chamber temperature will reduce the efficiency of air filtration for ABS and ASA.\n"
 "\n"
@@ -15372,6 +15419,17 @@ msgstr ""
 "Якщо цей параметр увімкнено, він також встановлює змінну gcode під назвою chamber_temperature, яку можна використовувати для передавання бажаної температури камери у макрос запуску друку або макрос прогріву, наприклад:\n"
 "PRINT_START (інші змінні) CHAMBER_TEMP=[chamber_temperature].\n"
 "Це може бути корисним, якщо ваш принтер не підтримує команди M141/M191 або якщо ви хочете керувати прогрівом камери у макросі запуску друку за відсутності активного нагрівача камери."
+
+msgid ""
+"This is the chamber temperature at which printing should start, while the chamber continues heating toward the \"Target\" chamber temperature. For example, set the Target to 60 and the Minimal to 50 to begin printing once the chamber reaches 50°C, without waiting for the full 60°C.\n"
+"\n"
+"It sets a G-code variable named chamber_minimal_temperature, which can be passed to your print start macro or a heat soak macro, like this: PRINT_START (other variables) CHAMBER_MIN_TEMP=[chamber_minimal_temperature].\n"
+"\n"
+"Unlike the \"Target\" chamber temperature, this option does not emit any M141/M191 commands; it only exposes the value to your custom G-code. It should not exceed the \"Target\" chamber temperature."
+msgstr ""
+
+msgid "Chamber minimal temperature"
+msgstr ""
 
 # TODO: Review, changed by lang refactor. PR 14254
 msgid "Nozzle temperature after the first layer"
@@ -15417,20 +15475,6 @@ msgstr "Товщина верхньої оболонки"
 # TODO: Review, changed by lang refactor. PR 14254
 msgid "The number of top solid layers is increased when slicing if the thickness calculated by top shell layers is thinner than this value. This can avoid having too thin a shell when layer height is small. 0 means that this setting is disabled and thickness of top shell is determined simply by the number of top shell layers."
 msgstr "Кількість верхніх суцільних шарів збільшується при розрізанні, якщо товщина, обчислена шарами верхньої оболонки, тонша за це значення. Це дозволяє уникнути занадто тонкої оболонки при невеликій висоті шару. 0 означає, що це налаштування вимкнено і товщина верхньої оболонки повністюобмежена верхніми шарами оболонки"
-
-msgid "Top surface density"
-msgstr ""
-
-msgid "Density of top surface layer. A value of 100% creates a fully solid, smooth top layer. Reducing this value results in a textured top surface, according to the chosen top surface pattern. A value of 0% will result in only the walls on the top layer being created. Intended for aesthetic or functional purposes, not to fix issues such as over-extrusion."
-msgstr ""
-
-msgid "Bottom surface density"
-msgstr ""
-
-msgid ""
-"Density of the bottom surface layer. Intended for aesthetic or functional purposes, not to fix issues such as over-extrusion.\n"
-"WARNING: Lowering this value may negatively affect bed adhesion."
-msgstr ""
 
 # TODO: Review, changed by lang refactor. PR 14254
 msgid "This is the speed at which traveling is done."
@@ -18037,6 +18081,132 @@ msgstr "Вхід/Тест"
 msgid "Connection to printers connected via the print host failed."
 msgstr "Не вдалося підключитися до принтерів, підключених через вузол друку."
 
+msgid "Detect Creality K-series printer"
+msgstr ""
+
+msgid "Click Scan to look for K-series printers on your network."
+msgstr ""
+
+msgid "Use Selected"
+msgstr ""
+
+msgid "Scanning the LAN for K-series printers... this takes a few seconds."
+msgstr ""
+
+msgid "No K-series printers found. Make sure the printer is on the same network and not blocked by Wi-Fi client isolation, then click Scan again."
+msgstr ""
+
+#, c-format
+msgid "Found %zu Creality printer(s). Select one and click Use Selected."
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Printers"
+msgstr ""
+
+msgid "Processes"
+msgstr ""
+
+msgid "Show/Hide system information"
+msgstr ""
+
+msgid "Copy system information to clipboard"
+msgstr ""
+
+msgid "We need information for diagnosing source of the issue. Check wiki page for detailed guide."
+msgstr ""
+
+msgid "Pack button collects project file and logs of current session onto a zip file."
+msgstr ""
+
+msgid "Any additional visual examples like images or screen recordings might be helpful while reporting the issue."
+msgstr ""
+
+msgid "Report issue"
+msgstr ""
+
+msgid "Pack"
+msgstr ""
+
+msgid "Cleans and rebuilds system profiles cache on next launch"
+msgstr ""
+
+msgid "Clean system profiles cache"
+msgstr ""
+
+msgid "Clean"
+msgstr ""
+
+msgid "Loaded profiles overview"
+msgstr ""
+
+msgid "This section shows information for loaded profiles"
+msgstr ""
+
+msgid "Exports detailed overview of loaded profiles in json format"
+msgstr ""
+
+msgid "Configurations folder"
+msgstr ""
+
+msgid "Opens configurations folder"
+msgstr ""
+
+msgid "Log level"
+msgstr ""
+
+msgid "Stored logs"
+msgstr ""
+
+msgid "Packs all stored logs onto a zip file."
+msgstr ""
+
+msgid "Profiles"
+msgstr ""
+
+msgid "Select NO to close dialog and review project"
+msgstr ""
+
+msgid "No project file on current session. Only logs will be included to package"
+msgstr ""
+
+msgid "Select NO to close dialog and review project."
+msgstr ""
+
+msgid "Please make sure any instances of OrcaSlicer are not running"
+msgstr ""
+
+msgid "System folder cannot be deleted because some files are in use by another application. Please close any applications using these files and try again."
+msgstr ""
+
+msgid "Failed to delete system folder..."
+msgstr ""
+
+msgid "Failed to determine executable path."
+msgstr ""
+
+msgid "Failed to launch a new instance."
+msgstr ""
+
+msgid "log(s)"
+msgstr ""
+
+msgid "Choose where to save the exported JSON file"
+msgstr ""
+
+msgid ""
+"Export failed\n"
+"Please check write permissions or file in use by another application"
+msgstr ""
+
+msgid "Choose where to save the exported ZIP file"
+msgstr ""
+
+msgid "File already exists. Overwrite?"
+msgstr ""
+
 msgid "3DPrinterOS Cloud upload options"
 msgstr ""
 
@@ -18118,6 +18288,19 @@ msgstr "З’єднання з MKS працює коректно."
 
 msgid "Could not connect to MKS"
 msgstr "Не вдалося підключитися до MKS"
+
+msgid "Connection to Moonraker is working correctly."
+msgstr ""
+
+msgid "Could not connect to Moonraker"
+msgstr ""
+
+msgid "The host responded but it doesn't look like Moonraker (missing result.klippy_state)."
+msgstr ""
+
+#, c-format, boost-format
+msgid "Could not parse Moonraker server response: %s"
+msgstr ""
 
 msgid "Connection to OctoPrint is working correctly."
 msgstr "Підключення до OctoPrint працює правильно."
@@ -19274,6 +19457,22 @@ msgid ""
 msgstr ""
 "Уникнення деформації\n"
 "Чи знаєте ви, що при друку матеріалами, схильними до деформації, такими як ABS, відповідне підвищення температури гарячого ліжка може зменшити ймовірність деформації?"
+
+#~ msgid "View control settings"
+#~ msgstr "Перегляд параметрів керування"
+
+#~ msgid "Rotate view"
+#~ msgstr "Повернути вигляд"
+
+#~ msgid "Pan view"
+#~ msgstr "Панорамний вигляд"
+
+#~ msgid "Zoom view"
+#~ msgstr "Перегляд масштабу"
+
+# TODO: Review, changed by lang refactor. PR 14254
+#~ msgid "Reverse scroll direction while zooming"
+#~ msgstr "Колісок миші реверсує при масштабуванні"
 
 #~ msgid "Enable network plug-in"
 #~ msgstr "Увімкнути мережевий плагін"
