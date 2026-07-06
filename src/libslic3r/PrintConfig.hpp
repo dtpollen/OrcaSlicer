@@ -1647,7 +1647,11 @@ PRINT_CONFIG_CLASS_DERIVED_DEFINE(
 
     ((ConfigOptionBools,               activate_chamber_temp_control))
     ((ConfigOptionInts ,               chamber_temperature))
-    
+
+    // Orca: specialized temperatures (cold end / extruder) - stored only, exposed as G-code variables
+    ((ConfigOptionInts ,               cold_temperature))
+    ((ConfigOptionInts ,               extruder_temperature))
+
     // Orca: support adaptive bed mesh
     ((ConfigOptionFloat,               preferred_orientation))
     ((ConfigOptionPoint,               bed_mesh_min))

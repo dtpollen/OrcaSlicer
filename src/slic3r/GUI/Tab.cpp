@@ -3978,6 +3978,12 @@ void TabFilament::build()
         line.append_option(optgroup->get_option("nozzle_temperature", 0));
         optgroup->append_line(line);
 
+        // Orca: specialized temperatures. Stored on the filament preset and exposed as the G-code
+        // variables [cold_temperature] and [extruder_temperature]; not used by the slicer itself.
+        optgroup = page->new_optgroup(L("Specialized temperatures"), L"param_extruder_temp");
+        optgroup->append_single_option_line("cold_temperature");
+        optgroup->append_single_option_line("extruder_temperature");
+
         optgroup = page->new_optgroup(L("Bed temperature"), L"param_bed_temp");
         line = { L("Cool Plate (SuperTack)"),
                  L("Bed temperature when the Cool Plate SuperTack is installed. A value of 0 means the filament does not support printing on the Cool Plate SuperTack.") };
