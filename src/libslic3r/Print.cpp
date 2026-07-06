@@ -207,6 +207,9 @@ bool Print::invalidate_state_by_config_options(const ConfigOptionResolver & /* n
         // Orca
         "chamber_temperature",
         "chamber_minimal_temperature",
+        // Orca: stored-only specialized temperatures, exposed as G-code variables
+        "cold_temperature",
+        "extruder_temperature",
         "thumbnails",
         "thumbnails_format",
         "seam_gap",
