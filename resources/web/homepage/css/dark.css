@@ -61,8 +61,8 @@ body
 /*-----Right Top MenuBtn-----*/
 .MenuItem:hover
 {
-	border-color: #00675b;
-	background-color: #223C3C;
+	border-color: #A77200;		/*Pollen AM color*/
+	background-color: #3A2E18;	/*Pollen AM color, dark tint*/
 }
 
 .FileImg
@@ -80,7 +80,7 @@ body
 
 .CT_Item:hover
 {
-	background-color:#00675b; /*ORCA color*/
+	background-color:#A77200; /*Pollen AM color*/
 }
 
 /*----User Manual------*/

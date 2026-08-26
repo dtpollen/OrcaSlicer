@@ -305,12 +305,16 @@ public:
         m_bg_color = StateColor::darkModeColorFor(wxColour("#FFFFFF"));
         m_fg_color = StateColor::darkModeColorFor(wxColour("#6B6A6A"));
         m_progress_bg_color = StateColor::darkModeColorFor(wxColour("#DFDFDF"));
-        m_progress_fg_color = StateColor::darkModeColorFor(wxColour("#009688"));
+        m_progress_fg_color = StateColor::darkModeColorFor(wxColour("#F6A800"));
         m_progress_h = FromDIP(6);
         bool dark_mode = m_fg_color != wxColour("#6B6A6A");
         wxSize sz  = m_window->GetClientSize();
         BitmapCache bmp_cache;
-        m_logo_bmp = *bmp_cache.load_svg(dark_mode ? "splash_logo_dark" : "splash_logo", sz.GetWidth(), sz.GetHeight());
+        // Pollen AM: raster logo (not vector) -> load_png, NanoSVG (used by
+        // load_svg) can't rasterize an embedded <image>. Distinct file names
+        // (not overwriting splash_logo(.svg)) to keep the stock Orca assets
+        // untouched and this customization easy to spot/revert.
+        m_logo_bmp = *bmp_cache.load_png(dark_mode ? "splash_logo_pollen_dark" : "splash_logo_pollen", sz.GetWidth(), sz.GetHeight());
 
         m_window->Bind(wxEVT_PAINT, &SplashScreen::OnPaint, this);
         m_window->Refresh();
@@ -2809,7 +2813,7 @@ bool GUI_App::on_init_inner()
             RichMessageDialog
                 dlg(nullptr,
                     wxString::Format(_L("%s\nDo you want to continue?"), msg),
-                    "OrcaSlicer", wxICON_QUESTION | wxYES_NO);
+                    SLIC3R_APP_FULL_NAME, wxICON_QUESTION | wxYES_NO);
             dlg.ShowCheckBox(_L("Remember my choice"));
             if (dlg.ShowModal() != wxID_YES) return false;
 
@@ -3876,7 +3880,7 @@ void GUI_App::UpdateDarkUI(wxWindow* window, bool highlited/* = false*/, bool ju
         auto orig_col = window->GetBackgroundColour();
         auto bg_col = StateColor::darkModeColorFor(orig_col);
         // there are cases where the background color of an item is bright, specifically:
-        // * the background color of a button: #009688  -- 73
+        // * the background color of a button: #F6A800  -- 73
         if (bg_col != orig_col) {
             window->SetBackgroundColour(bg_col);
         }
